@@ -1,0 +1,203 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="1312" viewBox="0 0 1700 1312" role="img" aria-label="PDF and YouTube Ingestion Architecture">
+<defs>
+<marker id="arrow_334155" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#334155"/></marker>
+<marker id="arrowStart" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#334155"/></marker>
+</defs>
+<rect width="1700" height="1312" fill="#FFFFFF"/>
+<rect x="0" y="0" width="1700" height="6" fill="#2563EB"/>
+<rect x="567" y="0" width="567" height="6" fill="#7C3AED"/>
+<rect x="1133" y="0" width="567" height="6" fill="#059669"/>
+<text x="50" y="58" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="700" fill="#0F172A">PDF and YouTube Ingestion Architecture</text>
+<text x="50" y="90" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15.5" fill="#64748B">Two separate input paths that join one common backend pipeline, from upload to searchable, citable chunks</text>
+<g transform="translate(50,112)">
+<text x="40" y="58" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="700" fill="#1E3A8A" text-anchor="start">PDF path</text>
+<rect x="40" y="70" width="220" height="120" rx="10" fill="#F8FAFC" stroke="#64748B" stroke-width="1.6"/>
+<text x="150.0" y="124.25" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1E293B" text-anchor="middle">Student uploads PDF</text>
+<text x="150.0" y="154.85" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">XHR upload with byte progress</text>
+<rect x="300" y="70" width="220" height="120" rx="10" fill="#EFF6FF" stroke="#2563EB" stroke-width="1.6"/>
+<text x="410.0" y="116.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1E3A8A" text-anchor="middle">Files route (Next.js)</text>
+<text x="410.0" y="146.6" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">session + ownership · type PDF ·</text>
+<text x="410.0" y="163.1" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">≤ 50 MB · SHA-256 of content</text>
+<rect x="560" y="70" width="220" height="120" rx="10" fill="#EFF6FF" stroke="#2563EB" stroke-width="1.6"/>
+<text x="670.0" y="107.75" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1E3A8A" text-anchor="middle">Duplicate check</text>
+<text x="670.0" y="138.35" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">unique (workspaceId,</text>
+<text x="670.0" y="154.85" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">contentSha256) · duplicate →</text>
+<text x="670.0" y="171.35" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">reuse existing File</text>
+<rect x="820" y="70" width="220" height="120" rx="10" fill="#EFF6FF" stroke="#2563EB" stroke-width="1.6"/>
+<text x="930.0" y="116.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1E3A8A" text-anchor="middle">Store and register</text>
+<text x="930.0" y="146.6" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">bytes → local upload folder ·</text>
+<text x="930.0" y="163.1" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">File = processing + lease</text>
+<rect x="1080" y="70" width="220" height="120" rx="10" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1.6"/>
+<text x="1190.0" y="116.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#4C1D95" text-anchor="middle">POST /v1/ingest</text>
+<text x="1190.0" y="146.6" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">file_type pdf · file_url = 10-min</text>
+<text x="1190.0" y="163.1" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">capability URL · ES256 token</text>
+<rect x="1340" y="70" width="220" height="120" rx="10" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1.6"/>
+<text x="1450.0" y="107.75" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#4C1D95" text-anchor="middle">Fetch and extract</text>
+<text x="1450.0" y="138.35" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">allowed origin only · size +</text>
+<text x="1450.0" y="154.85" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">%PDF- check · pypdf text page by</text>
+<text x="1450.0" y="171.35" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">page</text>
+<text x="40" y="238" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="700" fill="#1E3A8A" text-anchor="start">YouTube path</text>
+<rect x="40" y="250" width="220" height="120" rx="10" fill="#F8FAFC" stroke="#64748B" stroke-width="1.6"/>
+<text x="150.0" y="296.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1E293B" text-anchor="middle">Student adds YouTube link</text>
+<text x="150.0" y="326.59999999999997" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">link entered in the materials</text>
+<text x="150.0" y="343.09999999999997" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">panel</text>
+<rect x="300" y="250" width="220" height="120" rx="10" fill="#EFF6FF" stroke="#2563EB" stroke-width="1.6"/>
+<text x="410.0" y="296.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1E3A8A" text-anchor="middle">Files route (Next.js)</text>
+<text x="410.0" y="326.59999999999997" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">session + ownership · extract</text>
+<text x="410.0" y="343.09999999999997" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">11-character video id</text>
+<rect x="560" y="250" width="220" height="120" rx="10" fill="#EFF6FF" stroke="#2563EB" stroke-width="1.6"/>
+<text x="670.0" y="287.75" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1E3A8A" text-anchor="middle">Duplicate check</text>
+<text x="670.0" y="318.34999999999997" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">unique (workspaceId,</text>
+<text x="670.0" y="334.84999999999997" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">youtubeVideoId) · same video in</text>
+<text x="670.0" y="351.34999999999997" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">progress → 409</text>
+<rect x="820" y="250" width="220" height="120" rx="10" fill="#EFF6FF" stroke="#2563EB" stroke-width="1.6"/>
+<text x="930.0" y="296.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1E3A8A" text-anchor="middle">Register (no bytes)</text>
+<text x="930.0" y="326.59999999999997" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">File type youtube_url =</text>
+<text x="930.0" y="343.09999999999997" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">processing + lease</text>
+<rect x="1080" y="250" width="220" height="120" rx="10" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1.6"/>
+<text x="1190.0" y="296.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#4C1D95" text-anchor="middle">POST /v1/ingest</text>
+<text x="1190.0" y="326.59999999999997" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">file_type youtube · file_url =</text>
+<text x="1190.0" y="343.09999999999997" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">YouTube URL · ES256 token</text>
+<rect x="1340" y="250" width="220" height="120" rx="10" fill="#ECFDF5" stroke="#059669" stroke-width="1.6"/>
+<text x="1450.0" y="287.75" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#064E3B" text-anchor="middle">Fetch captions</text>
+<text x="1450.0" y="318.34999999999997" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">Team 4A caption processor ·</text>
+<text x="1450.0" y="334.84999999999997" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">English preferred, else own track</text>
+<text x="1450.0" y="351.34999999999997" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">· title via yt-dlp</text>
+<path d="M260,130 L300,130" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow_334155)" stroke-linejoin="round"/>
+<circle cx="280.0" cy="108" r="11.5" fill="#0F172A" stroke="#FFFFFF" stroke-width="2"/>
+<text x="280.0" y="112.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+<path d="M260,310 L300,310" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow_334155)" stroke-linejoin="round"/>
+<circle cx="280.0" cy="288" r="11.5" fill="#0F172A" stroke="#FFFFFF" stroke-width="2"/>
+<text x="280.0" y="292.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+<path d="M520,130 L560,130" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow_334155)" stroke-linejoin="round"/>
+<circle cx="540.0" cy="108" r="11.5" fill="#0F172A" stroke="#FFFFFF" stroke-width="2"/>
+<text x="540.0" y="112.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+<path d="M520,310 L560,310" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow_334155)" stroke-linejoin="round"/>
+<circle cx="540.0" cy="288" r="11.5" fill="#0F172A" stroke="#FFFFFF" stroke-width="2"/>
+<text x="540.0" y="292.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+<path d="M780,130 L820,130" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow_334155)" stroke-linejoin="round"/>
+<circle cx="800.0" cy="108" r="11.5" fill="#0F172A" stroke="#FFFFFF" stroke-width="2"/>
+<text x="800.0" y="112.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+<path d="M780,310 L820,310" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow_334155)" stroke-linejoin="round"/>
+<circle cx="800.0" cy="288" r="11.5" fill="#0F172A" stroke="#FFFFFF" stroke-width="2"/>
+<text x="800.0" y="292.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+<path d="M1040,130 L1080,130" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow_334155)" stroke-linejoin="round"/>
+<circle cx="1060.0" cy="108" r="11.5" fill="#0F172A" stroke="#FFFFFF" stroke-width="2"/>
+<text x="1060.0" y="112.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+<path d="M1040,310 L1080,310" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow_334155)" stroke-linejoin="round"/>
+<circle cx="1060.0" cy="288" r="11.5" fill="#0F172A" stroke="#FFFFFF" stroke-width="2"/>
+<text x="1060.0" y="292.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+<path d="M1300,130 L1340,130" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow_334155)" stroke-linejoin="round"/>
+<circle cx="1320.0" cy="108" r="11.5" fill="#0F172A" stroke="#FFFFFF" stroke-width="2"/>
+<text x="1320.0" y="112.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+<path d="M1300,310 L1340,310" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow_334155)" stroke-linejoin="round"/>
+<circle cx="1320.0" cy="288" r="11.5" fill="#0F172A" stroke="#FFFFFF" stroke-width="2"/>
+<text x="1320.0" y="292.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+<text x="40" y="458" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="700" fill="#064E3B" text-anchor="start">Common ingestion pipeline (FastAPI backend)</text>
+<rect x="1340" y="470" width="220" height="130" rx="10" fill="#ECFDF5" stroke="#059669" stroke-width="1.6"/>
+<text x="1450.0" y="504.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#064E3B" text-anchor="middle">Structure-aware chunking</text>
+<text x="1450.0" y="535.1" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">Team 4A/4B chunker · PDF chunks</text>
+<text x="1450.0" y="551.6" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">never cross pages (page_number) ·</text>
+<text x="1450.0" y="568.1" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">captions → whole segments</text>
+<text x="1450.0" y="584.6" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">(start/end seconds)</text>
+<rect x="1080" y="470" width="220" height="130" rx="10" fill="#ECFDF5" stroke="#059669" stroke-width="1.6"/>
+<text x="1190.0" y="512.75" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#064E3B" text-anchor="middle">Embeddings</text>
+<text x="1190.0" y="543.35" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">all-minilm via Ollama · 384-d ·</text>
+<text x="1190.0" y="559.85" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">length checked against</text>
+<text x="1190.0" y="576.35" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">VECTOR_SIZE</text>
+<path d="M820,479 a110.0,9 0 0,0 220,0 v112 a110.0,9 0 0,1 -220,0 z" fill="#FFFBEB" stroke="#D97706" stroke-width="1.6"/>
+<ellipse cx="930.0" cy="479" rx="110.0" ry="9" fill="#FFFBEB" stroke="#D97706" stroke-width="1.6"/>
+<text x="930.0" y="521.75" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#78350F" text-anchor="middle">Qdrant upsert</text>
+<text x="930.0" y="552.35" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">tenant collection · payload</text>
+<text x="930.0" y="568.85" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">workspace_id, document_id,</text>
+<text x="930.0" y="585.35" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">generation</text>
+<rect x="560" y="470" width="220" height="130" rx="10" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1.6"/>
+<text x="670.0" y="521.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#4C1D95" text-anchor="middle">Activate generation</text>
+<text x="670.0" y="551.6" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">ingest registry marks it active ·</text>
+<text x="670.0" y="568.1" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">older generations deleted</text>
+<rect x="300" y="470" width="220" height="130" rx="10" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1.6"/>
+<text x="410.0" y="512.75" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#4C1D95" text-anchor="middle">Response</text>
+<text x="410.0" y="543.35" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">200 {state: ready,</text>
+<text x="410.0" y="559.85" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">chunks_indexed} · errors → error</text>
+<text x="410.0" y="576.35" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">envelope</text>
+<rect x="40" y="470" width="220" height="130" rx="10" fill="#EFF6FF" stroke="#2563EB" stroke-width="1.6"/>
+<text x="150.0" y="521.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1E3A8A" text-anchor="middle">File status = ready</text>
+<text x="150.0" y="551.6" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">or failed with a student-friendly</text>
+<text x="150.0" y="568.1" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">message and Retry</text>
+<path d="M1560,130 L1585,130 L1585,520 L1560,520" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow_334155)" stroke-linejoin="round"/>
+<path d="M1450,370 L1450,470" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow_334155)" stroke-linejoin="round"/>
+<circle cx="1585" cy="330" r="11.5" fill="#0F172A" stroke="#FFFFFF" stroke-width="2"/>
+<text x="1585" y="334.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">6</text>
+<circle cx="1450" cy="420" r="11.5" fill="#0F172A" stroke="#FFFFFF" stroke-width="2"/>
+<text x="1450" y="424.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">6</text>
+<path d="M1340,535 L1300,535" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow_334155)" stroke-linejoin="round"/>
+<circle cx="1320.0" cy="513" r="11.5" fill="#0F172A" stroke="#FFFFFF" stroke-width="2"/>
+<text x="1320.0" y="517.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">7</text>
+<path d="M1080,535 L1040,535" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow_334155)" stroke-linejoin="round"/>
+<circle cx="1060.0" cy="513" r="11.5" fill="#0F172A" stroke="#FFFFFF" stroke-width="2"/>
+<text x="1060.0" y="517.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">8</text>
+<path d="M820,535 L780,535" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow_334155)" stroke-linejoin="round"/>
+<circle cx="800.0" cy="513" r="11.5" fill="#0F172A" stroke="#FFFFFF" stroke-width="2"/>
+<text x="800.0" y="517.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">9</text>
+<path d="M560,535 L520,535" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow_334155)" stroke-linejoin="round"/>
+<circle cx="540.0" cy="513" r="11.5" fill="#0F172A" stroke="#FFFFFF" stroke-width="2"/>
+<text x="540.0" y="517.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">10</text>
+<path d="M300,535 L260,535" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow_334155)" stroke-linejoin="round"/>
+<circle cx="280.0" cy="513" r="11.5" fill="#0F172A" stroke="#FFFFFF" stroke-width="2"/>
+<text x="280.0" y="517.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">11</text>
+<rect x="30" y="650" width="800" height="200" rx="14" fill="#FFFFFF" fill-opacity="0.45" stroke="#94A3B8" stroke-width="1.8" stroke-dasharray="8 5"/>
+<text x="44" y="672" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#0F172A" text-anchor="start">File status lifecycle (MongoDB File.status)</text>
+<rect x="60" y="712" width="150" height="52" rx="10" fill="#EFF6FF" stroke="#2563EB" stroke-width="1.6"/>
+<text x="135.0" y="743.0" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="14" font-weight="600" fill="#1E3A8A" text-anchor="middle">uploading</text>
+<rect x="280" y="712" width="160" height="52" rx="10" fill="#EFF6FF" stroke="#2563EB" stroke-width="1.6"/>
+<text x="360.0" y="743.0" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="14" font-weight="600" fill="#1E3A8A" text-anchor="middle">processing</text>
+<rect x="560" y="690" width="150" height="46" rx="10" fill="#ECFDF5" stroke="#059669" stroke-width="1.6"/>
+<text x="635.0" y="718.0" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="14" font-weight="600" fill="#064E3B" text-anchor="middle">ready</text>
+<rect x="560" y="780" width="150" height="46" rx="10" fill="#FEF2F2" stroke="#DC2626" stroke-width="1.6"/>
+<text x="635.0" y="808.0" font-family="Consolas, 'SFMono-Regular', Menlo, monospace" font-size="14" font-weight="600" fill="#7F1D1D" text-anchor="middle">failed</text>
+<path d="M210,738 L280,738" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow_334155)" stroke-linejoin="round"/>
+<path d="M440,728 L560,713" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow_334155)" stroke-linejoin="round"/>
+<path d="M440,750 L560,798" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow_334155)" stroke-linejoin="round"/>
+<path d="M560,815 L360,815 L360,764" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow_334155)" stroke-linejoin="round"/>
+<rect x="446.0" y="696" width="46.5" height="17" rx="3" fill="#FFFFFF" fill-opacity="0.92"/>
+<text x="450" y="708" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="400" fill="#334155" text-anchor="start">indexed</text>
+<rect x="718.0" y="796" width="178.5" height="17" rx="3" fill="#FFFFFF" fill-opacity="0.92"/>
+<text x="722" y="808" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="400" fill="#334155" text-anchor="start">error · timeout · lease expired</text>
+<rect x="368.0" y="822" width="35.5" height="17" rx="3" fill="#FFFFFF" fill-opacity="0.92"/>
+<text x="372" y="834" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="400" fill="#334155" text-anchor="start">Retry</text>
+<rect x="870" y="650" width="700" height="200" rx="14" fill="#FFFFFF" fill-opacity="0.45" stroke="#94A3B8" stroke-width="1.8" stroke-dasharray="8 5"/>
+<text x="884" y="672" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="700" fill="#0F172A" text-anchor="start">Rules on this path</text>
+<text x="890" y="700" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="400" fill="#334155" text-anchor="start">• Synchronous call: the backend answers only after indexing and activation.</text>
+<text x="890" y="718" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="400" fill="#334155" text-anchor="start">• Re-ingestion is safe: a failed attempt keeps the previous generation active.</text>
+<text x="890" y="736" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="400" fill="#334155" text-anchor="start">• The backend fetches files only from INGEST_ALLOWED_ORIGINS and never logs the URL.</text>
+<text x="890" y="754" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="400" fill="#334155" text-anchor="start">• No OCR for scanned pages · MP4 rejected · videos need captions.</text>
+</g>
+<rect x="50" y="1006" width="1600" height="250" rx="12" fill="#F8FAFC" stroke="#E2E8F0"/>
+<text x="74" y="1038" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" fill="#0F172A">Legend</text>
+<rect x="74" y="1055" width="22" height="16" rx="4" fill="#EFF6FF" stroke="#2563EB" stroke-width="1.6"/>
+<text x="106" y="1068" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#334155">Team 4C application (Next.js)</text>
+<rect x="74" y="1081" width="22" height="16" rx="4" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1.6"/>
+<text x="106" y="1094" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#334155">Team 4C authentication and integration layer</text>
+<rect x="74" y="1107" width="22" height="16" rx="4" fill="#ECFDF5" stroke="#059669" stroke-width="1.6"/>
+<text x="106" y="1120" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#334155">Team 4A/4B capabilities (joint FastAPI backend)</text>
+<rect x="74" y="1133" width="22" height="16" rx="4" fill="#FFFBEB" stroke="#D97706" stroke-width="1.6"/>
+<text x="106" y="1146" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#334155">Data store</text>
+<rect x="74" y="1159" width="22" height="16" rx="4" fill="#F8FAFC" stroke="#64748B" stroke-width="1.6"/>
+<text x="106" y="1172" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#334155">User, runtime or external service</text>
+<circle cx="85" cy="1193" r="10" fill="#0F172A"/><text x="85" y="1197" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" fill="#fff" text-anchor="middle">1</text>
+<text x="106" y="1198" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#334155">Numbered step in the flow</text>
+<line x1="74" y1="1219" x2="96" y2="1219" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow_334155)"/>
+<text x="106" y="1224" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#334155">Request or data flow</text>
+<text x="560" y="1038" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" fill="#0F172A">Technical notes</text>
+<text x="560" y="1066" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#334155">• Ingestion is synchronous: POST /v1/ingest returns 200 only after the chunks are indexed and the new</text>
+<text x="560" y="1085" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#334155">  generation is activated. The upload request waits up to 5 minutes.</text>
+<text x="560" y="1104" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#334155">• Generations: each ingestion gets a new generation number. A failed attempt leaves the previous generation</text>
+<text x="560" y="1123" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#334155">  active; partial chunks are never searchable.</text>
+<text x="560" y="1142" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#334155">• Chunk limits: at most 1,200 characters, and the embedding text must fit a 512-token budget counted as bytes</text>
+<text x="560" y="1161" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#334155">  (about 496 bytes). The byte budget is usually the tighter limit.</text>
+<text x="560" y="1180" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#334155">• Pages without a text layer (scanned PDFs) produce no text; OCR is not on this path. MP4 uploads are</text>
+<text x="560" y="1199" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#334155">  rejected. YouTube videos without captions cannot be ingested.</text>
+<text x="560" y="1218" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#334155">• A processing lease (renewed every 30 s, expires after 6 min) lets the app recover files left in &#x27;processing&#x27;</text>
+<text x="560" y="1237" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#334155">  after a crash.</text>
+<text x="50" y="1288" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#64748B">EduCopilot — Multi-Modal Educational Intelligence Copilot · Accion Labs industry project (2026) · verified final integrated build, local demo configuration (not a production deployment)</text>
+</svg>

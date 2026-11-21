@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="1330" viewBox="0 0 1700 1330" role="img" aria-label="RAG Pipeline Architecture">
+<defs>
+<marker id="arrow_334155" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#334155"/></marker>
+<marker id="arrowStart" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#334155"/></marker>
+</defs>
+<rect width="1700" height="1330" fill="#FFFFFF"/>
+<rect x="0" y="0" width="1700" height="6" fill="#2563EB"/>
+<rect x="567" y="0" width="567" height="6" fill="#7C3AED"/>
+<rect x="1133" y="0" width="567" height="6" fill="#059669"/>
+<text x="50" y="58" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="700" fill="#0F172A">RAG Pipeline Architecture</text>
+<text x="50" y="90" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15.5" fill="#64748B">From a student&#x27;s question to a verified, cited answer, or an honest refusal, inside one workspace</text>
+<g transform="translate(50,112)">
+<rect x="40" y="60" width="200" height="110" rx="10" fill="#F8FAFC" stroke="#64748B" stroke-width="1.6"/>
+<text x="140.0" y="109.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1E293B" text-anchor="middle">Student question</text>
+<text x="140.0" y="140.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="400" fill="#334155" text-anchor="middle">≤ 2,000 characters</text>
+<rect x="290" y="60" width="270" height="110" rx="10" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1.6"/>
+<text x="425.0" y="92.75" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#4C1D95" text-anchor="middle">Follow-up detection</text>
+<text x="425.0" y="123.35000000000001" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">adds the conversation topic to the search</text>
+<text x="425.0" y="139.85" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">query (English and Hindi); the model still</text>
+<text x="425.0" y="156.35" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">sees the original question</text>
+<rect x="610" y="60" width="290" height="110" rx="10" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1.6"/>
+<text x="755.0" y="92.75" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#4C1D95" text-anchor="middle">Retrieval scope</text>
+<text x="755.0" y="123.35000000000001" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">workspace_id from the verified token ·</text>
+<text x="755.0" y="139.85" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">selected document_ids · active generation per</text>
+<text x="755.0" y="156.35" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">document</text>
+<rect x="980" y="40" width="280" height="110" rx="10" fill="#ECFDF5" stroke="#059669" stroke-width="1.6"/>
+<text x="1120.0" y="81.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#064E3B" text-anchor="middle">Vector search</text>
+<text x="1120.0" y="111.60000000000001" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">embed query (all-minilm) → Qdrant cosine,</text>
+<text x="1120.0" y="128.1" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">workspace filter · up to 50</text>
+<rect x="980" y="190" width="280" height="110" rx="10" fill="#ECFDF5" stroke="#059669" stroke-width="1.6"/>
+<text x="1120.0" y="231.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#064E3B" text-anchor="middle">BM25 keyword search</text>
+<text x="1120.0" y="261.6" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">rank-bm25 over in-scope chunks (≤ 10,000) ·</text>
+<text x="1120.0" y="278.09999999999997" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">\w+ tokens · up to 50</text>
+<rect x="1320" y="100" width="240" height="140" rx="10" fill="#ECFDF5" stroke="#059669" stroke-width="1.6"/>
+<text x="1440.0" y="155.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#064E3B" text-anchor="middle">Reciprocal Rank Fusion</text>
+<text x="1440.0" y="186.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="400" fill="#334155" text-anchor="middle">Σ 1 / (60 + rank) · normalised to</text>
+<text x="1440.0" y="203.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="400" fill="#334155" text-anchor="middle">0–1</text>
+<path d="M240,115 L290,115" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow_334155)" stroke-linejoin="round"/>
+<circle cx="265" cy="93" r="11.5" fill="#0F172A" stroke="#FFFFFF" stroke-width="2"/>
+<text x="265" y="97.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+<path d="M560,115 L610,115" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow_334155)" stroke-linejoin="round"/>
+<circle cx="585" cy="93" r="11.5" fill="#0F172A" stroke="#FFFFFF" stroke-width="2"/>
+<text x="585" y="97.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+<path d="M900,115 L940,115 L940,95 L980,95" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow_334155)" stroke-linejoin="round"/>
+<path d="M940,115 L940,245 L980,245" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow_334155)" stroke-linejoin="round"/>
+<circle cx="940" cy="170" r="11.5" fill="#0F172A" stroke="#FFFFFF" stroke-width="2"/>
+<text x="940" y="174.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+<path d="M1260,95 L1290,95 L1290,140 L1320,140" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow_334155)" stroke-linejoin="round"/>
+<path d="M1260,245 L1290,245 L1290,200 L1320,200" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow_334155)" stroke-linejoin="round"/>
+<circle cx="1290" cy="170" r="11.5" fill="#0F172A" stroke="#FFFFFF" stroke-width="2"/>
+<text x="1290" y="174.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+<rect x="1280" y="360" width="280" height="130" rx="10" fill="#ECFDF5" stroke="#059669" stroke-width="1.6"/>
+<text x="1420.0" y="410.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#064E3B" text-anchor="middle">Score threshold (one setting)</text>
+<text x="1420.0" y="441.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="400" fill="#334155" text-anchor="middle">keep fused score ≥ threshold</text>
+<text x="1420.0" y="458.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="400" fill="#334155" text-anchor="middle">code default 0.5 · demo setting 0.25</text>
+<rect x="1000" y="360" width="230" height="130" rx="10" fill="#ECFDF5" stroke="#059669" stroke-width="1.6"/>
+<text x="1115.0" y="410.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#064E3B" text-anchor="middle">Top 5 chunks</text>
+<text x="1115.0" y="441.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="400" fill="#334155" text-anchor="middle">TOP_K_DEFAULT = 5 · the citable</text>
+<text x="1115.0" y="458.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="400" fill="#334155" text-anchor="middle">hits</text>
+<rect x="720" y="360" width="230" height="130" rx="10" fill="#ECFDF5" stroke="#059669" stroke-width="1.6"/>
+<text x="835.0" y="410.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#064E3B" text-anchor="middle">Neighbour expansion</text>
+<text x="835.0" y="441.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="400" fill="#334155" text-anchor="middle">same document · chunk index</text>
+<text x="835.0" y="458.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="400" fill="#334155" text-anchor="middle">within ±3</text>
+<rect x="440" y="360" width="230" height="130" rx="10" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1.6"/>
+<text x="555.0" y="410.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#4C1D95" text-anchor="middle">Final scope check</text>
+<text x="555.0" y="441.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="400" fill="#334155" text-anchor="middle">nothing outside the workspace</text>
+<text x="555.0" y="458.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="400" fill="#334155" text-anchor="middle">leaves the retriever</text>
+<path d="M1440,240 L1440,360" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow_334155)" stroke-linejoin="round"/>
+<circle cx="1440" cy="300" r="11.5" fill="#0F172A" stroke="#FFFFFF" stroke-width="2"/>
+<text x="1440" y="304.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+<path d="M1280,425 L1230,425" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow_334155)" stroke-linejoin="round"/>
+<circle cx="1255" cy="403" r="11.5" fill="#0F172A" stroke="#FFFFFF" stroke-width="2"/>
+<text x="1255" y="407.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">6</text>
+<path d="M1000,425 L950,425" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow_334155)" stroke-linejoin="round"/>
+<circle cx="975" cy="403" r="11.5" fill="#0F172A" stroke="#FFFFFF" stroke-width="2"/>
+<text x="975" y="407.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">7</text>
+<path d="M720,425 L670,425" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow_334155)" stroke-linejoin="round"/>
+<circle cx="695" cy="403" r="11.5" fill="#0F172A" stroke="#FFFFFF" stroke-width="2"/>
+<text x="695" y="407.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">8</text>
+<rect x="40" y="560" width="290" height="140" rx="10" fill="#ECFDF5" stroke="#059669" stroke-width="1.6"/>
+<text x="185.0" y="607.75" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#064E3B" text-anchor="middle">Evidence packing</text>
+<text x="185.0" y="638.35" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">items C1…Cn (metadata + text) · whole chunks</text>
+<text x="185.0" y="654.85" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">within 8,192 − 512 − 512 byte budget ·</text>
+<text x="185.0" y="671.35" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">summary + recent turns</text>
+<rect x="390" y="560" width="270" height="140" rx="10" fill="#F8FAFC" stroke="#64748B" stroke-width="1.6"/>
+<text x="525.0" y="615.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1E293B" text-anchor="middle">llama3 via Ollama</text>
+<text x="525.0" y="646.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="400" fill="#334155" text-anchor="middle">temperature 0 · max 512 tokens · JSON</text>
+<text x="525.0" y="663.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="400" fill="#334155" text-anchor="middle">schema {answer, citations}</text>
+<rect x="390" y="740" width="270" height="100" rx="10" fill="#ECFDF5" stroke="#059669" stroke-width="1.6"/>
+<text x="525.0" y="776.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#064E3B" text-anchor="middle">System rules (Team 4B prompt)</text>
+<text x="525.0" y="806.6" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">answer from evidence · evidence is data,</text>
+<text x="525.0" y="823.1" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">not instructions · cite labels</text>
+<rect x="720" y="545" width="330" height="170" rx="10" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1.6"/>
+<text x="885.0" y="598.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#4C1D95" text-anchor="middle">Answer verification</text>
+<text x="885.0" y="629.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="400" fill="#334155" text-anchor="middle">1 JSON valid · only real labels</text>
+<text x="885.0" y="646.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="400" fill="#334155" text-anchor="middle">2 decline / echo → no citations</text>
+<text x="885.0" y="663.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="400" fill="#334155" text-anchor="middle">3 support ≥ 25 % content words</text>
+<text x="885.0" y="680.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="400" fill="#334155" text-anchor="middle">4 valid page or timestamp metadata</text>
+<rect x="1140" y="520" width="300" height="110" rx="10" fill="#EFF6FF" stroke="#2563EB" stroke-width="1.6"/>
+<text x="1290.0" y="560.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1E3A8A" text-anchor="middle">Verified answer + citations</text>
+<text x="1290.0" y="591.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="400" fill="#334155" text-anchor="middle">labels renumbered [1], [2] → streamed as</text>
+<text x="1290.0" y="608.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="400" fill="#334155" text-anchor="middle">NDJSON</text>
+<rect x="1140" y="660" width="300" height="110" rx="10" fill="#FEF2F2" stroke="#DC2626" stroke-width="1.6"/>
+<text x="1290.0" y="701.0" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#7F1D1D" text-anchor="middle">Honest refusal</text>
+<text x="1290.0" y="731.6" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">&#x27;The available documents do not provide enough</text>
+<text x="1290.0" y="748.1" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">context…&#x27; · no citations</text>
+<path d="M440,425 L185,425 L185,560" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow_334155)" stroke-linejoin="round"/>
+<circle cx="185" cy="490" r="11.5" fill="#0F172A" stroke="#FFFFFF" stroke-width="2"/>
+<text x="185" y="494.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">9</text>
+<path d="M330,630 L390,630" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow_334155)" stroke-linejoin="round"/>
+<circle cx="360" cy="608" r="11.5" fill="#0F172A" stroke="#FFFFFF" stroke-width="2"/>
+<text x="360" y="612.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">10</text>
+<path d="M525,740 L525,700" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow_334155)" stroke-linejoin="round"/>
+<path d="M660,630 L720,630" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow_334155)" stroke-linejoin="round"/>
+<circle cx="690" cy="608" r="11.5" fill="#0F172A" stroke="#FFFFFF" stroke-width="2"/>
+<text x="690" y="612.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">11</text>
+<path d="M1050,630 L1090,630 L1090,575 L1140,575" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow_334155)" stroke-linejoin="round"/>
+<path d="M1090,630 L1090,715 L1140,715" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow_334155)" stroke-linejoin="round"/>
+<circle cx="1090" cy="650" r="11.5" fill="#0F172A" stroke="#FFFFFF" stroke-width="2"/>
+<text x="1090" y="654.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">12</text>
+<rect x="1094.0" y="548" width="52.0" height="17" rx="3" fill="#FFFFFF" fill-opacity="0.92"/>
+<text x="1098" y="560" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="400" fill="#334155" text-anchor="start">all pass</text>
+<rect x="1094.0" y="730" width="57.5" height="17" rx="3" fill="#FFFFFF" fill-opacity="0.92"/>
+<text x="1098" y="742" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="400" fill="#334155" text-anchor="start">any fails</text>
+</g>
+<rect x="50" y="1006" width="1600" height="268" rx="12" fill="#F8FAFC" stroke="#E2E8F0"/>
+<text x="74" y="1038" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" fill="#0F172A">Legend</text>
+<rect x="74" y="1055" width="22" height="16" rx="4" fill="#EFF6FF" stroke="#2563EB" stroke-width="1.6"/>
+<text x="106" y="1068" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#334155">Team 4C application (Next.js)</text>
+<rect x="74" y="1081" width="22" height="16" rx="4" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1.6"/>
+<text x="106" y="1094" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#334155">Team 4C authentication and integration layer</text>
+<rect x="74" y="1107" width="22" height="16" rx="4" fill="#ECFDF5" stroke="#059669" stroke-width="1.6"/>
+<text x="106" y="1120" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#334155">Team 4A/4B capabilities (joint FastAPI backend)</text>
+<rect x="74" y="1133" width="22" height="16" rx="4" fill="#FFFBEB" stroke="#D97706" stroke-width="1.6"/>
+<text x="106" y="1146" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#334155">Data store</text>
+<rect x="74" y="1159" width="22" height="16" rx="4" fill="#F8FAFC" stroke="#64748B" stroke-width="1.6"/>
+<text x="106" y="1172" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#334155">User, runtime or external service</text>
+<circle cx="85" cy="1193" r="10" fill="#0F172A"/><text x="85" y="1197" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" fill="#fff" text-anchor="middle">1</text>
+<text x="106" y="1198" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#334155">Numbered step in the flow</text>
+<line x1="74" y1="1219" x2="96" y2="1219" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow_334155)"/>
+<text x="106" y="1224" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#334155">Request or data flow</text>
+<line x1="74" y1="1245" x2="96" y2="1245" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow_334155)"/>
+<text x="106" y="1250" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#334155">Branch: verified answer or refusal</text>
+<text x="560" y="1038" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" fill="#0F172A">Technical notes</text>
+<text x="560" y="1066" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#334155">• Search mode is always hybrid in EduCopilot. Each search returns up to 50 candidates (TOP_K_MAX).</text>
+<text x="560" y="1085" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#334155">• RRF: score = Σ 1 / (60 + rank) over both rankings, divided by the best possible score (2/61), so scores fall</text>
+<text x="560" y="1104" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#334155">  between 0 and 1.</text>
+<text x="560" y="1123" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#334155">• The score threshold is ONE setting (SCORE_THRESHOLD_DEFAULT): the code default is 0.5 and the demo launcher</text>
+<text x="560" y="1142" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#334155">  set it to 0.25. They are alternatives, not two filters.</text>
+<text x="560" y="1161" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#334155">• Verification reduces unsupported answers but does not guarantee correctness: the support check is a coarse</text>
+<text x="560" y="1180" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#334155">  word-overlap test.</text>
+<text x="560" y="1199" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#334155">• Generation settings: llama3:latest, temperature 0, at most 512 output tokens, 8,192-token context, JSON</text>
+<text x="560" y="1218" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#334155">  schema output.</text>
+<text x="50" y="1306" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#64748B">EduCopilot — Multi-Modal Educational Intelligence Copilot · Accion Labs industry project (2026) · verified final integrated build, local demo configuration (not a production deployment)</text>
+</svg>

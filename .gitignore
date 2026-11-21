@@ -1,0 +1,48 @@
+# Operating system
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors and IDEs
+.vscode/
+.idea/
+*.swp
+*~
+
+# Environment and secrets (never commit)
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+jwks*.json
+
+# Dependencies and build output (in case tooling is added later)
+node_modules/
+.venv/
+venv/
+__pycache__/
+.next/
+dist/
+build/
+coverage/
+out/
+
+# Logs and temporary files
+*.log
+*.tmp
+tmp/
+temp/
+
+# Local data
+data/
+.local-uploads/
+*.sqlite
+*.db
+
+# Test artifacts
+test-results/
+playwright-report/
+*.zip

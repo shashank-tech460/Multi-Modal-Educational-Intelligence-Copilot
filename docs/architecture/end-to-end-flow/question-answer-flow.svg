@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="1330" viewBox="0 0 1700 1330" role="img" aria-label="End-to-End Question and Answer Flow">
+<defs>
+<marker id="arrow_334155" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#334155"/></marker>
+<marker id="arrowStart" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#334155"/></marker>
+</defs>
+<rect width="1700" height="1330" fill="#FFFFFF"/>
+<rect x="0" y="0" width="1700" height="6" fill="#2563EB"/>
+<rect x="567" y="0" width="567" height="6" fill="#7C3AED"/>
+<rect x="1133" y="0" width="567" height="6" fill="#059669"/>
+<text x="50" y="58" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="700" fill="#0F172A">End-to-End Question and Answer Flow</text>
+<text x="50" y="90" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15.5" fill="#64748B">One question, step by step, from the browser through Next.js, MongoDB, the FastAPI backend and Ollama, and back</text>
+<g transform="translate(50,112)">
+<rect x="5" y="20" width="250" height="64" rx="10" fill="#F8FAFC" stroke="#64748B" stroke-width="1.6"/>
+<text x="130.0" y="46.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1E293B" text-anchor="middle">Browser</text>
+<text x="130.0" y="76.7" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="middle">student</text>
+<line x1="130" y1="84" x2="130" y2="850" stroke="#CBD5E1" stroke-width="2" stroke-dasharray="6 6"/>
+<rect x="345" y="20" width="250" height="64" rx="10" fill="#EFF6FF" stroke="#2563EB" stroke-width="1.6"/>
+<text x="470.0" y="46.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1E3A8A" text-anchor="middle">Next.js /api/chat</text>
+<text x="470.0" y="76.7" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="middle">Team 4C · :3000</text>
+<line x1="470" y1="84" x2="470" y2="850" stroke="#CBD5E1" stroke-width="2" stroke-dasharray="6 6"/>
+<rect x="665" y="20" width="250" height="64" rx="10" fill="#FFFBEB" stroke="#D97706" stroke-width="1.6"/>
+<text x="790.0" y="46.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#78350F" text-anchor="middle">MongoDB</text>
+<text x="790.0" y="76.7" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="middle">application data</text>
+<line x1="790" y1="84" x2="790" y2="850" stroke="#CBD5E1" stroke-width="2" stroke-dasharray="6 6"/>
+<rect x="995" y="20" width="250" height="64" rx="10" fill="#ECFDF5" stroke="#059669" stroke-width="1.6"/>
+<text x="1120.0" y="46.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#064E3B" text-anchor="middle">FastAPI backend</text>
+<text x="1120.0" y="76.7" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="middle">integration layer + 4A/4B core · :8001</text>
+<line x1="1120" y1="84" x2="1120" y2="850" stroke="#CBD5E1" stroke-width="2" stroke-dasharray="6 6"/>
+<rect x="1345" y="20" width="250" height="64" rx="10" fill="#F8FAFC" stroke="#64748B" stroke-width="1.6"/>
+<text x="1470.0" y="46.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1E293B" text-anchor="middle">Ollama</text>
+<text x="1470.0" y="76.7" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="middle">llama3 · all-minilm · :11434</text>
+<line x1="1470" y1="84" x2="1470" y2="850" stroke="#CBD5E1" stroke-width="2" stroke-dasharray="6 6"/>
+<path d="M130,128 L470,128" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow_334155)" stroke-linejoin="round"/>
+<rect x="131.0" y="106" width="338.0" height="18" rx="3" fill="#FFFFFF" fill-opacity="0.92"/>
+<text x="300.0" y="119" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">POST /api/chat  {messages, workspaceId, conversationId}</text>
+<circle cx="146" cy="128" r="11.5" fill="#0F172A" stroke="#FFFFFF" stroke-width="2"/>
+<text x="146" y="132.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+<path d="M470,167 L504,167 L504,185 L476,185" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow_334155)"/>
+<circle cx="450" cy="176" r="11.5" fill="#0F172A" stroke="#FFFFFF" stroke-width="2"/>
+<text x="450" y="180.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+<rect x="510.0" y="167" width="320.0" height="18" rx="3" fill="#FFFFFF" fill-opacity="0.92"/>
+<text x="514" y="180" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="start">session · rate limit 20/min · question ≤ 2,000 chars</text>
+<path d="M470,224 L790,224" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow_334155)" stroke-linejoin="round"/>
+<rect x="521.0" y="202" width="218.0" height="18" rx="3" fill="#FFFFFF" fill-opacity="0.92"/>
+<text x="630.0" y="215" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">ownership: workspace + conversation</text>
+<circle cx="486" cy="224" r="11.5" fill="#0F172A" stroke="#FFFFFF" stroke-width="2"/>
+<text x="486" y="228.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+<path d="M470,272 L790,272" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow_334155)" stroke-linejoin="round"/>
+<rect x="488.0" y="250" width="284.0" height="18" rx="3" fill="#FFFFFF" fill-opacity="0.92"/>
+<text x="630.0" y="263" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">save question (generating) · read source scope</text>
+<circle cx="486" cy="272" r="11.5" fill="#0F172A" stroke="#FFFFFF" stroke-width="2"/>
+<text x="486" y="276.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+<path d="M470,320 L1120,320" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow_334155)" stroke-linejoin="round"/>
+<rect x="635.0" y="298" width="320.0" height="18" rx="3" fill="#FFFFFF" fill-opacity="0.92"/>
+<text x="795.0" y="311" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">POST /api/v1/query/stream + ES256 JWT (team4b-query)</text>
+<circle cx="486" cy="320" r="11.5" fill="#0F172A" stroke="#FFFFFF" stroke-width="2"/>
+<text x="486" y="324.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+<path d="M1120,359 L1154,359 L1154,377 L1126,377" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow_334155)"/>
+<circle cx="1100" cy="368" r="11.5" fill="#0F172A" stroke="#FFFFFF" stroke-width="2"/>
+<text x="1100" y="372.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">6</text>
+<rect x="1160.0" y="359" width="260.0" height="18" rx="3" fill="#FFFFFF" fill-opacity="0.92"/>
+<text x="1164" y="372" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="start">verify token · follow-up expansion · scope</text>
+<path d="M1120,416 L1470,416" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow_334155)" stroke-linejoin="round"/>
+<rect x="1219.0" y="394" width="152.0" height="18" rx="3" fill="#FFFFFF" fill-opacity="0.92"/>
+<text x="1295.0" y="407" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">embed query (all-minilm)</text>
+<circle cx="1136" cy="416" r="11.5" fill="#0F172A" stroke="#FFFFFF" stroke-width="2"/>
+<text x="1136" y="420.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">7</text>
+<path d="M1120,455 L1154,455 L1154,473 L1126,473" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow_334155)"/>
+<circle cx="1100" cy="464" r="11.5" fill="#0F172A" stroke="#FFFFFF" stroke-width="2"/>
+<text x="1100" y="468.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">8</text>
+<rect x="1160.0" y="455" width="248.0" height="18" rx="3" fill="#FFFFFF" fill-opacity="0.92"/>
+<text x="1164" y="468" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="start">BM25 + Qdrant → RRF → top 5 + neighbours</text>
+<path d="M1120,512 L1470,512" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow_334155)" stroke-linejoin="round"/>
+<rect x="1171.0" y="490" width="248.0" height="18" rx="3" fill="#FFFFFF" fill-opacity="0.92"/>
+<text x="1295.0" y="503" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">generate: llama3 · C1…Cn · JSON · temp 0</text>
+<circle cx="1136" cy="512" r="11.5" fill="#0F172A" stroke="#FFFFFF" stroke-width="2"/>
+<text x="1136" y="516.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">9</text>
+<path d="M1470,560 L1120,560" fill="none" stroke="#334155" stroke-width="1.8" stroke-dasharray="7 5" marker-end="url(#arrow_334155)" stroke-linejoin="round"/>
+<rect x="1234.0" y="538" width="122.0" height="18" rx="3" fill="#FFFFFF" fill-opacity="0.92"/>
+<text x="1295.0" y="551" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">{answer, citations}</text>
+<circle cx="1454" cy="560" r="11.5" fill="#0F172A" stroke="#FFFFFF" stroke-width="2"/>
+<text x="1454" y="564.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">10</text>
+<path d="M1120,599 L1154,599 L1154,617 L1126,617" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow_334155)"/>
+<circle cx="1100" cy="608" r="11.5" fill="#0F172A" stroke="#FFFFFF" stroke-width="2"/>
+<text x="1100" y="612.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">11</text>
+<rect x="1160.0" y="599" width="278.0" height="18" rx="3" fill="#FFFFFF" fill-opacity="0.92"/>
+<text x="1164" y="612" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="start">verify labels · declines · support · metadata</text>
+<path d="M1120,656 L470,656" fill="none" stroke="#334155" stroke-width="1.8" stroke-dasharray="7 5" marker-end="url(#arrow_334155)" stroke-linejoin="round"/>
+<rect x="641.0" y="634" width="308.0" height="18" rx="3" fill="#FFFFFF" fill-opacity="0.92"/>
+<text x="795.0" y="647" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">NDJSON: delta … done {answer, source_attributions}</text>
+<circle cx="1104" cy="656" r="11.5" fill="#0F172A" stroke="#FFFFFF" stroke-width="2"/>
+<text x="1104" y="660.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">12</text>
+<path d="M470,704 L790,704" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow_334155)" stroke-linejoin="round"/>
+<rect x="473.0" y="682" width="314.0" height="18" rx="3" fill="#FFFFFF" fill-opacity="0.92"/>
+<text x="630.0" y="695" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">keep workspace citations · save answer · auto-title</text>
+<circle cx="486" cy="704" r="11.5" fill="#0F172A" stroke="#FFFFFF" stroke-width="2"/>
+<text x="486" y="708.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">13</text>
+<path d="M470,752 L130,752" fill="none" stroke="#334155" stroke-width="1.8" stroke-dasharray="7 5" marker-end="url(#arrow_334155)" stroke-linejoin="round"/>
+<rect x="179.0" y="730" width="242.0" height="18" rx="3" fill="#FFFFFF" fill-opacity="0.92"/>
+<text x="300.0" y="743" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="middle">AI SDK UI stream: text + data-citations</text>
+<circle cx="454" cy="752" r="11.5" fill="#0F172A" stroke="#FFFFFF" stroke-width="2"/>
+<text x="454" y="756.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">14</text>
+<path d="M130,791 L164,791 L164,809 L136,809" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow_334155)"/>
+<circle cx="110" cy="800" r="11.5" fill="#0F172A" stroke="#FFFFFF" stroke-width="2"/>
+<text x="110" y="804.5" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">15</text>
+<rect x="170.0" y="791" width="242.0" height="18" rx="3" fill="#FFFFFF" fill-opacity="0.92"/>
+<text x="174" y="804" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#334155" text-anchor="start">chips: PDF → file#page=N · video → seek</text>
+</g>
+<rect x="50" y="1006" width="1600" height="268" rx="12" fill="#F8FAFC" stroke="#E2E8F0"/>
+<text x="74" y="1038" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" fill="#0F172A">Legend</text>
+<rect x="74" y="1055" width="22" height="16" rx="4" fill="#EFF6FF" stroke="#2563EB" stroke-width="1.6"/>
+<text x="106" y="1068" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#334155">Team 4C application (Next.js)</text>
+<rect x="74" y="1081" width="22" height="16" rx="4" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1.6"/>
+<text x="106" y="1094" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#334155">Team 4C authentication and integration layer</text>
+<rect x="74" y="1107" width="22" height="16" rx="4" fill="#ECFDF5" stroke="#059669" stroke-width="1.6"/>
+<text x="106" y="1120" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#334155">Team 4A/4B capabilities (joint FastAPI backend)</text>
+<rect x="74" y="1133" width="22" height="16" rx="4" fill="#FFFBEB" stroke="#D97706" stroke-width="1.6"/>
+<text x="106" y="1146" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#334155">Data store</text>
+<rect x="74" y="1159" width="22" height="16" rx="4" fill="#F8FAFC" stroke="#64748B" stroke-width="1.6"/>
+<text x="106" y="1172" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#334155">User, runtime or external service</text>
+<circle cx="85" cy="1193" r="10" fill="#0F172A"/><text x="85" y="1197" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="700" fill="#fff" text-anchor="middle">1</text>
+<text x="106" y="1198" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#334155">Numbered step in the flow</text>
+<line x1="74" y1="1219" x2="96" y2="1219" stroke="#334155" stroke-width="1.8" marker-end="url(#arrow_334155)"/>
+<text x="106" y="1224" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#334155">Request or data flow</text>
+<line x1="74" y1="1245" x2="96" y2="1245" stroke="#334155" stroke-width="1.8" stroke-dasharray="5 4" marker-end="url(#arrow_334155)"/>
+<text x="106" y="1250" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#334155">Response / stream back</text>
+<text x="560" y="1038" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="700" fill="#0F172A">Technical notes</text>
+<text x="560" y="1066" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#334155">• The question is saved (state generating) before the backend is called, so a failure or Stop never loses it;</text>
+<text x="560" y="1085" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#334155">  it is later marked answered, failed or stopped.</text>
+<text x="560" y="1104" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#334155">• The backend streams only after verification. Optional unverified &#x27;draft&#x27; events (?draft=1) are shown</text>
+<text x="560" y="1123" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#334155">  separately and never saved (not drawn).</text>
+<text x="560" y="1142" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#334155">• If verification fails, step 12 carries the standard &#x27;not enough context&#x27; answer with no citations.</text>
+<text x="560" y="1161" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#334155">• Citation display names come from MongoDB (File.originalName), never from the model or the backend.</text>
+<text x="560" y="1180" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#334155">• Stop: the browser aborts the fetch, the abort cancels the backend call, and the question is saved as</text>
+<text x="560" y="1199" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="13" fill="#334155">  stopped.</text>
+<text x="50" y="1306" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12" fill="#64748B">EduCopilot — Multi-Modal Educational Intelligence Copilot · Accion Labs industry project (2026) · verified final integrated build, local demo configuration (not a production deployment)</text>
+</svg>
