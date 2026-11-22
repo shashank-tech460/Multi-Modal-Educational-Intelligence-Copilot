@@ -1,7 +1,7 @@
 # Setup and Local Development
 
 > **Important: documentation-only repository.**
-> - This repository does **not** contain the application source code. The source is excluded because permission to publish it has not been confirmed (see the [README](../../README.md)).
+> - This repository does **not** contain the full application source code. It publishes approved project documentation and short code excerpts only (see the [README](../../README.md)).
 > - This guide describes **how the original integrated system was set up and run locally**, so a reader understands what running it involves.
 > - The commands below are **historical and illustrative**. They will **not** run from this repository and are not guaranteed to work as written.
 > - Actually running EduCopilot requires the project's source repositories, installed models and a correct environment configuration.

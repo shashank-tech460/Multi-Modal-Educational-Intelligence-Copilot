@@ -4,6 +4,11 @@ This changelog tracks the **portfolio documentation repository**. The project's 
 
 ## Portfolio repository
 
+### [1.1.0] — Core Computer Engineering Subjects
+- New `docs/core-subjects/` folder: an overview and eight subject documents (data structures and algorithms, object-oriented programming, database management systems, operating systems, computer networks, software engineering, computer organization and architecture, information security).
+- Each document maps the subject to the project's actual implementation, with source file references, short approved code excerpts, trade-offs, limitations and interview questions.
+- Publication of the project documentation and approved code excerpts was approved. The repository still does not contain the full application source code.
+
 ### [1.0.0] — Initial documentation release
 - README, project overview, technology stack, contributions and known limitations.
 - Architecture documents with Mermaid diagrams (system architecture, data flow).
@@ -11,7 +16,7 @@ This changelog tracks the **portfolio documentation repository**. The project's 
 - Guides: setup, environment, deployment.
 - Learning notes: RAG, embeddings and vector databases, BM25/hybrid search/RRF, JWT and authentication, LLM streaming.
 - Interview and viva preparation material.
-- Documentation only; no application source code (publication permission for the integrated code is not established).
+- Documentation only; no application source code.
 
 ## Project timeline (context)
 

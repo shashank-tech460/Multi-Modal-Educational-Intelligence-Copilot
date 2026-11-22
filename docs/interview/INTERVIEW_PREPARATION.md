@@ -1,6 +1,6 @@
 # Interview Preparation
 
-Your study guide for explaining EduCopilot in interviews. Start with [Project explanation](PROJECT_EXPLANATION.md) (spoken intros). Then use this page for **your role, integration, concept cards, and honest answers about issues**. Practise with [Technical questions](TECHNICAL_QUESTIONS.md) and [Viva preparation](VIVA_PREPARATION.md).
+Your study guide for explaining EduCopilot in interviews. Start with [Project explanation](PROJECT_EXPLANATION.md) (spoken intros). Then use this page for **your role, integration, concept cards, and honest answers about issues**. Practise with [Technical questions](TECHNICAL_QUESTIONS.md) and [Viva preparation](VIVA_PREPARATION.md). For subject-wise questions (DSA, OOP, DBMS, operating systems, networks, software engineering, security), see [Core subjects](../core-subjects/README.md).
 
 ---
 

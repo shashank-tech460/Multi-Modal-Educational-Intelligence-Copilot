@@ -4,7 +4,7 @@ An AI study assistant that answers students' questions using **their own PDFs an
 
 **Industry project at Accion Labs (2026)**, built collaboratively by Teams 4A, 4B and 4C. I was a member of **Team 4C**, which built the student-facing application and integrated it with the AI backend developed by Teams 4A and 4B.
 
-> **Publication scope:** this is a **documentation-only portfolio**. It explains the system, my Team 4C contribution and the verified test results. It does **not** contain the project's source code, which was written by several people for a collaborative industry project and has no confirmed publication permission. See [Contributions](CONTRIBUTIONS.md).
+> **Publication scope:** this is a **documentation portfolio**. It explains the system, my Team 4C contribution and the verified test results. It does **not** contain the full application source code, which was written by several people for a collaborative industry project. Publication of the project documentation and approved code excerpts has been approved; the documents include short, abridged code excerpts and source file references. See [Contributions](CONTRIBUTIONS.md).
 
 ---
 
@@ -119,6 +119,7 @@ Each suite is reported separately, and not every test passed. Details: [Testing]
 | Technical | [Tech stack deep dive](docs/technical/TECH_STACK_DEEP_DIVE.md) · [RAG pipeline](docs/technical/RAG_PIPELINE.md) · [File ingestion](docs/technical/FILE_INGESTION.md) · [Chat and streaming](docs/technical/CHAT_AND_STREAMING.md) · [Database design](docs/technical/DATABASE_DESIGN.md) · [API documentation](docs/technical/API_DOCUMENTATION.md) · [Authentication and security](docs/technical/AUTHENTICATION_AND_SECURITY.md) · [Testing](docs/technical/TESTING.md) |
 | Guides | [Setup](docs/guides/SETUP.md) · [Environment](docs/guides/ENVIRONMENT.md) · [Deployment](docs/guides/DEPLOYMENT.md) |
 | Learning | [RAG fundamentals](docs/learning/RAG_FUNDAMENTALS.md) · [Vector databases](docs/learning/VECTOR_DATABASES.md) · [BM25, hybrid search and RRF](docs/learning/BM25_AND_HYBRID_SEARCH.md) · [JWT and authentication](docs/learning/JWT_AND_AUTHENTICATION.md) · [LLM streaming](docs/learning/LLM_STREAMING.md) |
+| Core subjects | [Overview](docs/core-subjects/README.md) · [Data structures and algorithms](docs/core-subjects/01_Data_Structures_and_Algorithms.md) · [Object-oriented programming](docs/core-subjects/02_Object_Oriented_Programming.md) · [Database management systems](docs/core-subjects/03_Database_Management_Systems.md) · [Operating systems](docs/core-subjects/04_Operating_Systems.md) · [Computer networks](docs/core-subjects/05_Computer_Networks.md) · [Software engineering](docs/core-subjects/06_Software_Engineering.md) · [Computer organization and architecture](docs/core-subjects/07_Computer_Organization_and_Architecture.md) · [Information security](docs/core-subjects/08_Information_Security.md) |
 | Interview | [Project explanation](docs/interview/PROJECT_EXPLANATION.md) · [Interview preparation](docs/interview/INTERVIEW_PREPARATION.md) · [Technical questions](docs/interview/TECHNICAL_QUESTIONS.md) · [Why and why not](docs/interview/TECHNOLOGY_WHY_AND_WHY_NOT.md) · [Challenges and solutions](docs/interview/CHALLENGES_AND_SOLUTIONS.md) · [Viva preparation](docs/interview/VIVA_PREPARATION.md) |
 
 ## Limitations and scope
